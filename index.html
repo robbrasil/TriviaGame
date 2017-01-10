@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Trivia Game</title>
+
+    <!-- Bootstrap -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron text-center">
+
+            <h1>Trivia Game</h1>
+
+        </div>
+        <div class="panel panel-default">
+            <br>
+            <div class="text-center">
+                <button type "button" id="button" class="btn btn-danger btn-lg" onclick="gameStart()">Trivia Start!</button>
+            </div>
+
+            <div class="panel-body">
+                <div class="content text-center" id="content" style="display: none">
+                    <h2 id="timer" class="text-center">60</h2>
+                    <div class="questions text-center">
+                        <div class="question1">
+                            <h4 class="text-center">
+                                Which fruit is the most popular and most consumed in the world?
+                            </h4>
+                            <p class="text-center"><input type="radio" name="group1" class="false"> Apple</p>
+                            <p class="text-center"><input type="radio" name="group1" class="true"> Banana</p>
+                            <p class="text-center"><input type="radio" name="group1" class="false"> Watermelon</p>
+                            <p class="text-center"><input type="radio" name="group1" class="false"> Pear</p>
+                        </div>
+
+                        <div class="question2">
+                            <h4>
+                                Which is the biggest spider in the world?
+                            </h4>
+                            <p><input type="radio" name="group2" class="false"> Black Widow</p>
+                            <p><input type="radio" name="group2" class="false"> Mouse Spider</p>
+                            <p><input type="radio" name="group2" class="true"> Tarantula</p>
+                            <p><input type="radio" name="group2" class="false"> Huntsman Spider</p>
+                        </div>
+
+                        <div class="question3">
+                            <h4>
+                                Which is the highest building in the world?
+                            </h4>
+                            <p><input type="radio" name="group3" class="true"> Burj Khalifa</p>
+                            <p><input type="radio" name="group3" class="false"> Shanghai Tower</p>
+                            <p><input type="radio" name="group3" class="false"> Empire State Building</p>
+                            <p><input type="radio" name="group3" class="false"> International Commerce Centre</p>
+                        </div>
+
+                        <div class="question4">
+                            <h4>
+                                Which is the smallest country in the world?
+                            </h4>
+                            <p><input type="radio" name="group4" class="false"> Maldives</p>
+                            <p><input type="radio" name="group4" class="false"> San Marino</p>
+                            <p><input type="radio" name="group4" class="false"> Monaco</p>
+                            <p><input type="radio" name="group4" class="true"> The Vatican</p>
+                        </div>
+
+                        <div class="question5">
+                            <h4>
+                                Which is the largest land animal?
+                            </h4>
+                            <p><input type="radio" name="group5" class="false"> Giraffe</p>
+                            <p><input type="radio" name="group5" class="false"> Colossal Squid</p>
+                            <p><input type="radio" name="group5" class="false"> Blue whale</p>
+                            <p><input type="radio" name="group5" class="true"> African elephant</p>
+                        </div>
+
+                        <div class="question6">
+                            <h4>
+                                Where do apricots originate from?
+                            </h4>
+                            <p><input type="radio" name="group6" class="true"> China</p>
+                            <p><input type="radio" name="group6" class="false"> Brazil</p>
+                            <p><input type="radio" name="group6" class="false"> India</p>
+                            <p><input type="radio" name="group6" class="false"> South Africa</p>
+                        </div>
+
+                        <div class="question7">
+                            <h4>
+                                Which beans did Mexicans once use as payment for goods and services?
+                            </h4>
+                            <p><input type="radio" name="group7" class="false"> Peanut</p>
+                            <p><input type="radio" name="group7" class="false"> Soybean</p>
+                            <p><input type="radio" name="group7" class="true"> Cocoa beans</p>
+                            <p><input type="radio" name="group7" class="false"> Pea</p>
+                        </div>
+
+                        <div class="question8">
+                            <h4>
+                                Which is usually named as the most famous museum in the world?
+                            </h4>
+                            <p><input type="radio" name="group8" class="false"> Smithsonian Institution</p>
+                            <p><input type="radio" name="group8" class="true"> The 'Louvre' Museum</p>
+                            <p><input type="radio" name="group8" class="false"> British Museum</p>
+                            <p><input type="radio" name="group8" class="false"> The Acropolis Museum</p>
+                        </div>
+                    </div>
+                    <button type "button" id="buttonDone" class="btn btn-info btn-lg" onclick="gameDone()">Done</button>
+                </div>
+                <div class="text-center" id="endGameContent" style="display: none">
+                    <h1>All done!</h1>
+                    <h3>Correct answers:
+                        <h4 id="correctAnswers"></h4>
+                    </h3>
+                    <h3>Incorrect answers:
+                        <h4 id="incorrectAnswers"></h4>
+                    </h3>
+                    <h3>Unanswered questions:
+                        <h4 id="unanswered"></h4>
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="assets/javascript/bootstrap.min.js"></script>
+    <script src="assets/javascript/app.js"></script>
+</body>
+
+</html>
